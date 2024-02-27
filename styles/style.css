@@ -108,6 +108,7 @@ ol {
   display: flex;
   justify-content: space-between;
 }
+
 .content__video-card-thumbnail {
   object-fit: cover;
   object-position: center;
@@ -138,7 +139,7 @@ ol {
   font-size: inherit;
   background-color: transparent;
   appearance: none;
-  cursor: pointer;
+  cursor: text;
 }
 
 fieldset {
@@ -181,15 +182,12 @@ fieldset {
   height: 19px;
   border: 1px solid white;
 }
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: " ";
-  width: 19px;
-  height: 19px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
-  border: 1px solid #fff;
-  border: 2px solid #000;
-  outline: 1px solid #fff;
-  outline-offset: -1px;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
@@ -215,17 +213,19 @@ fieldset {
   color: #fff;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
-.content__card-link:active {
+.content__card-link:active,
+.content__card-link_current {
   background-color: #545050;
 }
 
-.content__card-link:focus {
-  outline: none;
-}
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   font-size: 30px;
@@ -237,7 +237,7 @@ fieldset {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16px;
@@ -263,9 +263,10 @@ fieldset {
 .button:active {
   background: #545050;
 }
+
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: -3px;
+  outline-offset: -2px;
 }
 
 .button:hover,
